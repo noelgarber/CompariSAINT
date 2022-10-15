@@ -7,12 +7,12 @@ The script:
 
 1) Formats the output to have columns including: 
 
-- Protein_ID
-- Gene
-- 2 x collapsed controls (Control_1 and Control_2)
-- Sample spectral counts, marked by pool (biological replicate) and qe# (technical replicate)
-- Average and sum spectral counts (AvgSpec and SpecSum)
-- BFDR (Bayesian false discovery rate)
+   - Protein_ID
+   - Gene
+   - 2 x collapsed controls (Control_1 and Control_2)
+   - Sample spectral counts, marked by pool (biological replicate) and qe# (technical replicate)
+   - Average and sum spectral counts (AvgSpec and SpecSum)
+   - BFDR (Bayesian false discovery rate)
 
 2) Concatenates the inputted SAINTexpress files to get one large dataframe allowing comparison of hits between baits
 
