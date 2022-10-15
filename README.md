@@ -18,4 +18,6 @@ The script:
 
 3) Finds the log2fc (log2 fold change) of the AvgSpec values for comparison, as well as the p-values, which are computed by scipy.stats.ttest_ind()
 
+To use the script, simply run ```python3 main.py``` and follow the prompts. The output is saved to the directory containing main.py. 
+
 If you find this script useful, you are free to use it with attribution. 
