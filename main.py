@@ -156,6 +156,7 @@ if permute_pairs == "Y":
 				bait_pairs.append(pair)
 else: 
 	no_more_pairs = False
+	print("bait_list =", bait_list)
 	while not no_more_pairs: 
 		bait1 = input("Enter bait #1 of a pair to compare, or hit enter if done:  ")
 		bait2 = input("Enter bait #2 of the pair (or hit enter to abort to last pair inputted):  ")
@@ -204,9 +205,9 @@ for protein_id in all_baits_df.index.values.tolist():
 		elif len(bait2_bio_values) < 3: 
 			warnings.warn("\tThere are less than 3 biological replicates for " + bait2 + "; t-test results using it will have low confidence.")
 
-		t_statistic, pvalue = scipy.stats.ttest_ind(bait1_bio_values, bait2_bio_values)
+		t_statistic, pvalue = scipy.stats.ttest_ind(bait1_bio_values, bait2_bio_values, equal_var = False)
 
-		all_baits_df.at[protein_id, bait1 + "_" + bait2 + "_pvalue"] = pvalue
+		all_baits_df.at[protein_id, bait1 + "_" + bait2 + "_welchs_pvalue"] = pvalue
 
 #Sort by best BFDR
 
